@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel do Administrador</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet" />
+    <script defer src="script.js"></script>
+</head>
+<body class="bg-zinc-900 text-yellow-400 font-[Montserrat]">
+
+    <header class="flex justify-between items-center p-4 bg-zinc-800 shadow-md">
+        <h1 class="text-2xl font-bold">Painel do Administrador</h1>
+        <a href="../catraca local/index.html" class="bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded transition">Ir para Catraca</a>
+    </header>
+
+    <main class="max-w-5xl mx-auto mt-10 p-6">
+        <section class="mb-10" id="cadastro-aluno">
+            <h2 class="text-xl mb-4 font-bold">Cadastrar Aluno</h2>
+            <div class="grid grid-cols-4 gap-4">
+                <input id="nome" type="text" placeholder="Nome" class="col-span-1 p-2 rounded bg-zinc-700 text-white border border-yellow-500" />
+                <input id="cpf" type="text" placeholder="CPF (somente números)" class="col-span-1 p-2 rounded bg-zinc-700 text-white border border-yellow-500" />
+                <select id="status" class="col-span-1 p-2 rounded bg-zinc-700 text-white border border-yellow-500">
+                    <option>Ativo</option>
+                    <option>Inativo</option>
+                </select>
+                <button onclick="cadastrarAluno()" class="col-span-1 bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded transition">Salvar</button>
+            </div>
+        </section>
+
+        <section class="mb-10 hidden" id="edicao-aluno">
+            <h2 class="text-xl mb-4 font-bold">Editar Aluno</h2>
+            <div class="grid grid-cols-4 gap-4">
+                <input type="hidden" id="editar-id">
+                <input id="editar-nome" type="text" placeholder="Nome" class="col-span-1 p-2 rounded bg-zinc-700 text-white border border-yellow-500" />
+                <input id="editar-cpf" type="text" placeholder="CPF (somente números)" class="col-span-1 p-2 rounded bg-zinc-700 text-white border border-yellow-500" readonly />
+                <select id="editar-status" class="col-span-1 p-2 rounded bg-zinc-700 text-white border border-yellow-500">
+                    <option>Ativo</option>
+                    <option>Inativo</option>
+                </select>
+                <div class="col-span-1 flex gap-2">
+                    <button onclick="salvarEdicaoAluno()" class="bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded transition">Salvar Edição</button>
+                    <button onclick="cancelarEdicao()" class="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded transition">Cancelar</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-xl mb-4 font-bold">Lista de Alunos</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-white border-collapse">
+                    <thead class="bg-yellow-100 text-black">
+                        <tr>
+                            <th class="p-2">ID</th>
+                            <th class="p-2">Nome</th>
+                            <th class="p-2">CPF</th>
+                            <th class="p-2">Status</th>
+                            <th class="p-2">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-alunos" class="bg-zinc-800 border border-yellow-400"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
