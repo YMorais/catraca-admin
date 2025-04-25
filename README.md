@@ -48,7 +48,7 @@ Este projeto é um sistema de controle de acesso para uma academia, com funciona
 ---
 
 ## 👥 Autores  
-- Manoela Bavia Camargo Pereira - [GitHub](hhttps://github.com/MBavia/) - manoela.bavia.senai@gmail.com
+- Yasmim Bueno de Morais - [GitHub](hhttps://github.com/YMorais/) - yasmim.morais.senai@gmail.com
 
 ---
 
@@ -58,7 +58,7 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para m
 ---
 
 ## 🌐 Acesso  
-- Manoela Bavia Camargo Pereira - [Vercel](https://catraca-admin-sigma.vercel.app/)
+- Yasmim Bueno de Morais - [Vercel](https://catraca-admin.vercel.app/)
 
 ---
 
